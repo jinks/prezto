@@ -72,7 +72,16 @@ zstyle ':prezto:module:editor' keymap 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+case ${HOST} in
+    ("hera")   HOSTCOLOR='white'  ;;
+    ("hydra")  HOSTCOLOR='green'  ;;
+    ("hermes") HOSTCOLOR='blue'   ;;
+    ("iris")   HOSTCOLOR='blue'   ;;
+    ("nyx")    HOSTCOLOR='yellow' ;;
+    (*)        HOSTCOLOR='red'    ;;
+esac
+zstyle ':prezto:module:prompt' theme 'jinks' ${HOSTCOLOR}
+unset HOSTCOLOR
 
 #
 # Screen

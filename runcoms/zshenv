@@ -98,3 +98,5 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
+# Set ZDOTDIR to "xdg-like" config
+export ZDOTDIR=${HOME}/.config/zsh
