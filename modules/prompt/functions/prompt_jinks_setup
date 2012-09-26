@@ -81,7 +81,7 @@ function prompt_jinks_setup {
   local dirstr="%B%F{cyan}%~%f%b"
 
   # Define prompts.
-  PROMPT="${clock}${lbra}${userstr}${hoststr}${rbra}${dirstr} ${git_info:+${(e)git_info[prompt]}}%(!. %B%F{red}#%f%b.%%)\${editor_info[keymap]} "
+  PROMPT="${clock}${lbra}${userstr}${hoststr}${rbra}${dirstr}\${git_info:+\${(e)git_info[prompt]}} %(!. %B%F{red}#%f%b.%%)\${editor_info[keymap]} "
   PS2="$lpar%B%F{cyan}%_%f%b$rpar%B%F{yellow} ->%f%b "
   RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
   SPROMPT="zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? "
